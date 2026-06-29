@@ -1,0 +1,26 @@
+============================================================
+SOC ALERT TRIAGE REPORT
+============================================================
+Timestamp     : 2026-06-29T11:02:44.000Z
+Agent         : win-server-01 (192.168.1.110)
+Rule          : PowerShell process spawned with encoded command
+Rule Level    : 15/15
+Severity      : CRITICAL
+MITRE         : T1078 - Valid Accounts | Defense Evasion
+Triage Time   : 40.12 seconds
+------------------------------------------------------------
+AI ANALYSIS:
+SUMMARY: A PowerShell process was detected on win-server-01 with an encoded command.
+
+ATTACK_TYPE: Encoded Command Execution
+
+MITRE_TECHNIQUE: T1078 - Valid Accounts
+
+MITRE_TACTIC: Defense Evasion
+
+SEVERITY_REASON: The use of encoded commands indicates a potential for malicious activity, which could lead to unauthorized system access or data exfiltration.
+
+RECOMMENDED_ACTION: Immediately investigate and verify the legitimacy of the PowerShell process on win-server-01, and consider running a Windows System Call Analysis (WSCA) scan to identify any suspicious system calls.
+
+FALSE_POSITIVE_LIKELIHOOD: Low - The encoded command and high rule level indicate that this alert is likely legitimate, given its specificity and context.
+============================================================

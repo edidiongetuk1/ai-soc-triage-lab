@@ -1,0 +1,20 @@
+============================================================
+SOC ALERT TRIAGE REPORT
+============================================================
+Timestamp     : 2026-06-29T10:23:11.000Z
+Agent         : ubuntu-server-01 (192.168.1.105)
+Rule          : sshd: authentication failed
+Rule Level    : 10/15
+Severity      : MEDIUM
+MITRE         : T1110 - Brute Force | Credential Access
+Triage Time   : 65.99 seconds
+------------------------------------------------------------
+AI ANALYSIS:
+SUMMARY: A failed password attempt for SSH login occurred on ubuntu-server-01.
+ATTACK_TYPE: Brute Force Attack
+MITRE_TECHNIQUE: T1110 - Brute Force
+MITRE_TACTIC: Credential Access
+SEVERITY_REASON: This event is severe due to the potential unauthorized access to sensitive information, especially if the attacker gains root access.
+RECOMMENDED_ACTION: Review and increase the SSH authentication difficulty level on ubuntu-server-01 immediately.
+FALSE_POSITIVE_LIKELIHOOD: Medium - The log entry lacks additional context, making it challenging to confirm or rule out this as a legitimate security incident.
+============================================================

@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-06-29T10:23:11.000Z",
+  "rule": {
+    "id": "5710",
+    "level": 10,
+    "description": "sshd: authentication failed",
+    "groups": [
+      "authentication_failed",
+      "sshd"
+    ]
+  },
+  "agent": {
+    "id": "001",
+    "name": "ubuntu-server-01",
+    "ip": "192.168.1.105"
+  },
+  "data": {
+    "srcip": "45.33.32.156",
+    "srcuser": "root",
+    "dstuser": "root"
+  },
+  "location": "/var/log/auth.log",
+  "full_log": "Failed password for root from 45.33.32.156 port 52341 ssh2"
+}

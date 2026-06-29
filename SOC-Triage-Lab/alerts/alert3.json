@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-06-29T11:02:44.000Z",
+  "rule": {
+    "id": "92201",
+    "level": 15,
+    "description": "PowerShell process spawned with encoded command",
+    "groups": [
+      "windows",
+      "powershell",
+      "attack"
+    ]
+  },
+  "agent": {
+    "id": "002",
+    "name": "win-server-01",
+    "ip": "192.168.1.110"
+  },
+  "data": {
+    "win": {
+      "eventdata": {
+        "commandLine": "powershell.exe -NoP -NonI -W Hidden -Enc JABjAGwAaQBlAG4AdA...",
+        "parentImage": "C:\\Windows\\System32\\cmd.exe",
+        "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+      }
+    }
+  },
+  "location": "EventChannel",
+  "full_log": "Sysmon Event ID 1 - Process Create: powershell.exe -Enc JABjAGwAaQBlAG4AdA..."
+}

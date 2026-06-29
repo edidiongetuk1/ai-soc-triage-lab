@@ -1,0 +1,28 @@
+title: SSH Brute Force Authentication Failure
+id: a1b2c3d4-1111-2222-3333-aabbccddeeff
+status: experimental
+description: Detects repeated SSH authentication failures from a single source IP indicating a brute force attack
+author: Eddybot
+date: 2026/06/29
+references:
+    - https://attack.mitre.org/techniques/T1110/001/
+tags:
+    - attack.credential_access
+    - attack.t1110.001
+logsource:
+    product: linux
+    service: auth
+detection:
+    selection:
+        process: sshd
+        message|contains: 'Failed password'
+    timeframe: 5m
+    condition: selection | count() by srcip > 5
+falsepositives:
+    - Legitimate users who mistype passwords repeatedly
+    - Automated scripts using wrong credentials
+level: high
+fields:
+    - srcip
+    - dstuser
+    - process

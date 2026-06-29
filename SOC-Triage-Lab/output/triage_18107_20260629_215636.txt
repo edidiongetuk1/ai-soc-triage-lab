@@ -1,0 +1,26 @@
+============================================================
+SOC ALERT TRIAGE REPORT
+============================================================
+Timestamp     : 2026-06-29T11:28:17.000Z
+Agent         : win-server-01 (192.168.1.110)
+Rule          : Mimikatz credential dumping tool detected
+Rule Level    : 13/15
+Severity      : CRITICAL
+MITRE         : T1078 - Valid Accounts | Defense Evasion
+Triage Time   : 41.62 seconds
+------------------------------------------------------------
+AI ANALYSIS:
+SUMMARY: The Wazuh alert detected a process created by mimikatz.exe, which is a known credential dumping tool, on the agent win-server-01 (192.168.1.110).
+
+ATTACK_TYPE: Credential Dumping
+
+MITRE_TECHNIQUE: T1078 - Valid Accounts
+
+MITRE_TACTIC: Defense Evasion
+
+SEVERITY_REASON: This alert is severe because mimikatz.exe can be used to steal sensitive credentials, compromising the security of the system and potentially leading to lateral movement.
+
+RECOMMENDED_ACTION: Isolate and remediate win-server-01 immediately by running a full antivirus scan and investigating any possible misconfigured accounts or group memberships.
+
+FALSE_POSITIVE_LIKELIHOOD: Low - The high rule level (13 out of 15) and the presence of the mimikatz.exe process indicate a potential security threat, making false positives unlikely.
+============================================================

@@ -1,0 +1,20 @@
+============================================================
+SOC ALERT TRIAGE REPORT
+============================================================
+Timestamp     : 2026-06-29T10:45:02.000Z
+Agent         : ubuntu-server-01 (192.168.1.105)
+Rule          : Successful sudo to root executed
+Rule Level    : 14/15
+Severity      : CRITICAL
+MITRE         : T1548.003 - Sudo and Sudo Caching | Privilege Escalation
+Triage Time   : 39.68 seconds
+------------------------------------------------------------
+AI ANALYSIS:
+SUMMARY: A successful sudo command to root was executed on ubuntu-server-01.
+ATTACK_TYPE: Privilege Escalation
+MITRE_TECHNIQUE: T1548.003 - Sudo and Sudo Caching
+MITRE_TACTIC: Privilege Escalation
+SEVERITY_REASON: This is a high-severity alert as it indicates that an attacker has obtained elevated privileges, potentially leading to further attacks.
+RECOMMENDED_ACTION: Investigate user john's access history and verify if the sudo command was executed with privilege escalation using additional log analysis tools.
+FALSE_POSITIVE_LIKELIHOOD: Low - The rule level is 14 out of 15, indicating a high likelihood that this alert is not a false positive.
+============================================================

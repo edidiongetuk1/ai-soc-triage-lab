@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-06-29T11:15:30.000Z",
+  "rule": {
+    "id": "87102",
+    "level": 12,
+    "description": "Windows Defender detected malware",
+    "groups": [
+      "windows",
+      "malware"
+    ]
+  },
+  "agent": {
+    "id": "002",
+    "name": "win-server-01",
+    "ip": "192.168.1.110"
+  },
+  "data": {
+    "win": {
+      "eventdata": {
+        "threatName": "Trojan:Win32/Meterpreter",
+        "path": "C:\\Users\\john\\Downloads\\update.exe",
+        "action": "Quarantine failed"
+      }
+    }
+  },
+  "location": "EventChannel",
+  "full_log": "Threat detected: Trojan:Win32/Meterpreter in C:\\Users\\john\\Downloads\\update.exe - Quarantine failed"
+}

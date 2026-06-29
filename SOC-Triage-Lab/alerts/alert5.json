@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-06-29T11:28:17.000Z",
+  "rule": {
+    "id": "18107",
+    "level": 13,
+    "description": "Mimikatz credential dumping tool detected",
+    "groups": [
+      "windows",
+      "attack",
+      "credential_dumping"
+    ]
+  },
+  "agent": {
+    "id": "002",
+    "name": "win-server-01",
+    "ip": "192.168.1.110"
+  },
+  "data": {
+    "win": {
+      "eventdata": {
+        "commandLine": "mimikatz.exe privilege::debug sekurlsa::logonpasswords",
+        "parentImage": "C:\\Windows\\System32\\cmd.exe",
+        "image": "C:\\mimikatz\\mimikatz.exe"
+      }
+    }
+  },
+  "location": "EventChannel",
+  "full_log": "Process created: mimikatz.exe privilege::debug sekurlsa::logonpasswords exit"
+}

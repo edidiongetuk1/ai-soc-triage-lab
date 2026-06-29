@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-06-29T10:45:02.000Z",
+  "rule": {
+    "id": "5402",
+    "level": 14,
+    "description": "Successful sudo to root executed",
+    "groups": [
+      "syslog",
+      "sudo"
+    ]
+  },
+  "agent": {
+    "id": "001",
+    "name": "ubuntu-server-01",
+    "ip": "192.168.1.105"
+  },
+  "data": {
+    "srcuser": "john",
+    "dstuser": "root",
+    "command": "/bin/bash"
+  },
+  "location": "/var/log/auth.log",
+  "full_log": "john : TTY=pts/0 ; PWD=/home/john ; USER=root ; COMMAND=/bin/bash"
+}
